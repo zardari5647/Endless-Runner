@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class RetryGame : MonoBehaviour
 {
+
+    public AudioSource backgroundMusic;
     // Start is called before the first frame update
     void Start()
     {
-        
+        backgroundMusic.Play();
     }
 
     // Update is called once per frame
@@ -16,7 +18,9 @@ public class RetryGame : MonoBehaviour
     {
         
     }
+  
 
+     //after clicking try again button
     public void LoadGame(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
     }

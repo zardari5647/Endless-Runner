@@ -16,13 +16,16 @@ public class DetectCollisionsBomb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+         //spawns object at this position
         spawnPos = new Vector3(transform.position.x, transform.position.y, transform.position.z + 10);
         
     }
 
+
+    //When player hits bomb, trigger explosion particle    
     void OnTriggerEnter(Collider other) {
-        //Destroy(gameObject);
+        
+        //explosionParticle at fixed position
         Instantiate(explosionParticle, spawnPos, Quaternion.identity);
         explosionParticle.Play();
      }

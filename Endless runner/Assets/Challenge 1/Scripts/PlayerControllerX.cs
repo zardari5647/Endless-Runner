@@ -24,12 +24,13 @@ public class PlayerControllerX : MonoBehaviour
     public int lives;
     public float speed;
     private float timer = 0f;
+    private Animator animator;
 
 
 
     public Image[] hearts;
-    public Sprite fullHeart;
-    public Sprite emptyHeart;
+    public Sprite fullHeart; //image
+    public Sprite emptyHeart; //image
     void Start()
     {
         speed = 0.1f;
@@ -39,11 +40,13 @@ public class PlayerControllerX : MonoBehaviour
         isGameActive = true;
         gameOverText.gameObject.SetActive(false);
         backgroundMusic.Play();
+        animator=GetComponent<Animator>();
     }
 
     void Update()
     {
 
+        // Display heart health sprites
         foreach (Image img in hearts){
             img.sprite = emptyHeart;
         }
@@ -51,24 +54,36 @@ public class PlayerControllerX : MonoBehaviour
             hearts[i].sprite=fullHeart;
         }
 
+        //Move forward
         transform.Translate(0,0,speed);
-        
+
+        //jump space key
         if (Input.GetKeyDown(KeyCode.Space)){   
-            if(transform.position.y<=0.01){
+            if(transform.position.y<=0.01){ //when player on ground
                playerRb.AddForce(Vector3.up * 7f, ForceMode.Impulse);
+               animator.SetBool("isJump",true);
+               
+
             }            
            
         }
+        //when player is in air 
+        if(transform.position.y > 2.3){
+            animator.SetBool("isJump",false);
+        }
 
-        horizontalInput = Input.GetAxis("Horizontal");
+ 
+        //makes player move left and right
+        horizontalInput = Input.GetAxis("Horizontal"); 
         Vector3 horizontalMovement = new Vector3(horizontalInput, 0f, 0f);
         playerRb.AddForce(horizontalMovement * 10f);
-
+         
+         //stops player from falling off edge
         if (transform.position.x < 411 )
         {
          transform.position = new Vector3(411, transform.position.y, transform.position.z);
         }
-
+        
         if (transform.position.x > 431 )
         {
          transform.position = new Vector3(431, transform.position.y, transform.position.z);
@@ -76,45 +91,52 @@ public class PlayerControllerX : MonoBehaviour
 
         timer += Time.deltaTime;
 
+        //when speed boost runs out
         if(timer > 5f){
             speed = 0.1f;
         }
 
 
-    }    
+    } 
 
+    
     private void OnCollisionEnter(Collision other)
     {
+ 
 
+
+          //when player collides with coins 
         if (other.gameObject.CompareTag("Money"))
         {
             coinSound.Play();
-            coinScore++;
+            coinScore++; //add one to coin total
             coins.text = "Coins: " + coinScore;
 
         } 
-        // if player collides with bomb, explode and set gameOver to true
+        // when player collides with bomb, 
         if (other.gameObject.CompareTag("Bomb"))
         {
 
             bombSound.Play();
-            Debug.Log("hit bomb");
+            Debug.Log(explosionParticle);
             explosionParticle.Play();
-            lives--;
+            lives--; //lose one live when collides with bomb
             livesText.text = "Lives: " + lives;
-
+  
+            //when all three lives are gone, loads game over screen
             if(lives==0){
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             }
 
 
 
-        }
+        }  
 
+         //when player collides with log
         if(other.gameObject.CompareTag("Wood"))
         {
 
-            lives--;
+            lives--; 
             livesText.text = "Lives: " + lives;
 
             if(lives==0){
@@ -122,23 +144,19 @@ public class PlayerControllerX : MonoBehaviour
             }
         }
 
+         //when player collects speed boost
         if(other.gameObject.CompareTag("Speed"))
         {
 
-            timer = 0f;
+            timer = 0f; //start of timer for speed boost
             speed = 0.3f;
         }
-
-
-        
-
 
     }
 
     public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
-        //restartButton.gameObject.SetActive(true);
         isGameActive = false;
     }
 

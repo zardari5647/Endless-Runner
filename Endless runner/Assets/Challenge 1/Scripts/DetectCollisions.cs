@@ -17,13 +17,10 @@ public class DetectCollisions : MonoBehaviour
     {
         
     }
-
+    //when gameobject collides with another gameobject, destroy it
     void OnTriggerEnter(Collider other) {
       Destroy(gameObject);
-      
-
-     //Destroy(other.gameObject);
-     }
+    }
 
 
 }

@@ -13,9 +13,10 @@ public class RepeatRoad : MonoBehaviour
     }
 
     private void Update()
-    {
+    {       
+        //when player passes road move current road after the third road 
         if(playerRb.position.z > transform.position.z + 200){
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 600);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 600); //three roads
         }
     }
 

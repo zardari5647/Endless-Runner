@@ -15,8 +15,9 @@ public class RepeatTerrain : MonoBehaviour
     void Update()
     {
 
+           //when player passes terrain, move current terrain after the third terrain   
           if(playerRb.position.z > transform.position.z + 97.5){
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 292.5f);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 292.5f); //three terrains
           }
         
     }

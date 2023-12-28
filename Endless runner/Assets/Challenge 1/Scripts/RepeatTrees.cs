@@ -15,6 +15,7 @@ public class RepeatTrees : MonoBehaviour
     void Update()
     {
 
+       //when player passes tree move current tree after third terrain
          if(playerRb.position.z > transform.position.z + 10){
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 292.5f);
          }

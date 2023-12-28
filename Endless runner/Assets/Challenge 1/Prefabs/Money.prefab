@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 241511097}
   - component: {fileID: 4777454022015003827}
   - component: {fileID: -1573873065285782969}
+  - component: {fileID: 678267984875860057}
   m_Layer: 0
   m_Name: Money
   m_TagString: Money
@@ -132,5 +133,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7ab71de96b9e54c868e76fbeb16ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: {fileID: 0}
-  coinScore: 0
+--- !u!114 &678267984875860057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8579601760348528630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 834e4bf1ef45f92459b8532fdaca82d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
