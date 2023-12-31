@@ -1,0 +1,16 @@
+- Main Menu Background Image: https://www.dreamstime.com/cartoon-forest-video-game-background-adventure-video-game-background-cartoon-forest-clear-sky-illustration-image105306846
+- Gameover_background: https://www.pinterest.ie/pin/432064157973858864/
+- Super Mario Bros. Music - Game Over (Audio Clip): https://www.youtube.com/watch?v=5Wc3kwv0Ddw
+- crash (audio clip for game background music): https://www.youtube.com/watch?v=5Wc3kwv0Ddw
+- Ground_Road Prefab: Unit 1 Tutorial https://learn.unity.com/project/unit-1-driving-simulation?courseId=5cf96c41edbc2a2ca6e8810f
+- Bomb and Money Prefabs: Unit 3 Support Files https://vle-bn.tudublin.ie/mod/folder/view.php?id=282317
+- Blip/Boom Audio sounds: Unit 3 Support Files https://vle-bn.tudublin.ie/mod/folder/view.php?id=282317
+- Pine_Fallen Prefab: https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-simple-nature-pack-162153
+- Forest_Tree, ForestTreeSpruce, ForestStraight, Forest_Tent Prefab Assets: https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-forest-environment-package-173273
+- 6-pixel-heart-1: https://www.onlygfx.com/6-pixel-heart-png-transparent/
+- Transparent_heart: https://stock.adobe.com/images/pixel-heart-8-bit-valentine-day-outline-design-black-symbol-on-transparent-background/341003016
+- Ch 46_non PBR (player character): https://www.mixamo.com/#/?page=1&type=Character
+- Player Animations (Running and Jumping): https://www.mixamo.com/#/?type=Motion%2CMotionPack
+- Skybox Image: https://assetstore.unity.com/packages/2d/textures-materials/sky/fantasy-skybox-free-18353
+
+All assets used here are unchanged from original source.
