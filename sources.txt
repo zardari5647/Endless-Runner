@@ -4,6 +4,7 @@
 - crash (audio clip for game background music): https://www.youtube.com/watch?v=5Wc3kwv0Ddw
 - Ground_Road Prefab: Unit 1 Tutorial https://learn.unity.com/project/unit-1-driving-simulation?courseId=5cf96c41edbc2a2ca6e8810f
 - Bomb and Money Prefabs: Unit 3 Support Files https://vle-bn.tudublin.ie/mod/folder/view.php?id=282317
+- Speed boost powerup prefab: https://assetstore.unity.com/packages/3d/props/low-poly-powerups-212079
 - Blip/Boom Audio sounds: Unit 3 Support Files https://vle-bn.tudublin.ie/mod/folder/view.php?id=282317
 - Pine_Fallen Prefab: https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-simple-nature-pack-162153
 - Forest_Tree, ForestTreeSpruce, ForestStraight, Forest_Tent Prefab Assets: https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-forest-environment-package-173273
