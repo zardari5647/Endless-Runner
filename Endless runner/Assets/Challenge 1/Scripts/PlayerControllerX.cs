@@ -33,7 +33,7 @@ public class PlayerControllerX : MonoBehaviour
     public Sprite emptyHeart; //image
     void Start()
     {
-        speed = 0.1f;
+        speed = 0.2f;
         lives=3;
         playerRb = GetComponent<Rigidbody>();
         playerRb.freezeRotation = true;
@@ -93,7 +93,7 @@ public class PlayerControllerX : MonoBehaviour
 
         //when speed boost runs out
         if(timer > 5f){
-            speed = 0.1f;
+            speed = 0.2f;
         }
 
 
@@ -149,7 +149,7 @@ public class PlayerControllerX : MonoBehaviour
         {
 
             timer = 0f; //start of timer for speed boost
-            speed = 0.3f;
+            speed = 0.4f;
         }
 
     }
